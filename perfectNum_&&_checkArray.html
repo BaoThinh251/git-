@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="date"></table>
+<!--<script>
+let arr = [];
+let length = parseInt(prompt("Nhập độ dài mảng: "));
+let total = 0;
+for(let i = 0; i < length && length < 50; i++){
+    arr[i] = parseFloat(prompt("Nhập số: "));
+    total += arr[i];
+} total = total / length;
+alert(total);
+</script>-->
+<script>
+    let num = parseInt(prompt("Nhập vào 1 số nguyên dương để kiểm tra: "))
+    let count = 0;
+    for(let i = 0 ; i < num; i++){
+        if(num % i === 0){
+            count += i;
+        }
+    } if(count === num){
+        alert("Đây là số hoàn hảo!");
+    } else {
+        alert("Đây không phải số hoàn hảo!");
+    }
+</script>
+</body>
+</html>

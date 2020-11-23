@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 style="text-align: center">DANH SÁCH CÔNG NHÂN</h3>
+<table border="1" id="workerList">
+</table>
+<script>
+    let workerArray = [
+        ["Nguyễn Văn A", "15/11/1996", "Quảng Nam", 10000000, "Giám đốc"],
+        ["Nguyễn Văn B", "15/11/1991", "Quảng Nam", 10000000, "Phó giám đốc"],
+        ["Lương Văn C", "15/8/1960", "Điện Bàn" , 5000000, "Lao công"],
+        ];
+    function showWorkerList() {
+        workerArray.sort();
+        let workerList = document.getElementById("workerList");
+        let htmlWorkerList = '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Họ và tên</th>\n' +
+            '        <th>Ngày sinh</th>\n' +
+            '        <th>Địa chỉ</th>\n' +
+            '        <th>Lương</th>\n' +
+            '        <th>Chức vụ</th>\n' +
+            '       </tr>';
+        for(let i = 0; i < workerArray.length; i++){
+                htmlWorkerList += '<tr>\n' +
+                    '        <td>' + (i + 1) + '</td>\n' +
+                    '        <td><input id="Name" type="text" value="' + workerArray[i][0] + '" readonly/></td>\n' +
+                    '        <td><input id="birth" type="text" value="' + workerArray[i][1] + '" readonly/></td>\n' +
+                    '        <td><input id="address" type="text" value="' + workerArray[i][2] + '" readonly/></td>\n' +
+                    '        <td><input id="salary" type="number" value="' + workerArray[i][3] + '" readonly/></td>\n' +
+                    '        <td><input id="position" type="text" value="' + workerArray[i][4] + '" readonly/></td>\n' +
+                    '           </tr>'
+            } workerList.innerHTML = htmlWorkerList;
+    }
+   showWorkerList();
+</script>
+</body>
+</html>
